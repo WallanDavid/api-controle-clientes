@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.db
+*.log
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Editor configs
+.vscode/
+.idea/
+
+# Sistema
+.DS_Store
+Thumbs.db
