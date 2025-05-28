@@ -1,81 +1,84 @@
-📦 API de Controle de Clientes
-API RESTful desenvolvida com FastAPI, JWT e SQLAlchemy para gerenciamento de usuários, clientes e ordens de serviço. Protegida com autenticação e documentação automática via Swagger.
+# 💼 API de Controle de Clientes
 
-🚀 Funcionalidades
-Cadastro e login de usuários
+![Docker](https://img.shields.io/badge/docker-ready-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.95%2B-brightgreen)
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
+![License](https://img.shields.io/github/license/WallanDavid/api-controle-clientes)
 
-Autenticação com JWT
+Sistema de gerenciamento de clientes e ordens de serviço com autenticação JWT. Ideal para portfólio e aplicações reais.
 
-CRUD de clientes (vinculados ao usuário)
+---
 
-CRUD de ordens de serviço (vinculadas a clientes)
+## 🚀 Tecnologias
 
-Documentação automática com Swagger UI
+- **FastAPI** — API moderna com OpenAPI (Swagger)
+- **JWT Auth** — Login seguro via token
+- **SQLite** — Banco de dados local simples
+- **Docker & Compose** — Containerização rápida
+- **Uvicorn** — Servidor leve e performático
+- **Pydantic v2** — Validação com dataclasses modernas
 
-Banco local com SQLite
+---
 
-🛠️ Tecnologias utilizadas
-FastAPI
+## 🔧 Funcionalidades
 
-Uvicorn
+- Registro e login de usuários
+- Geração e verificação de token JWT
+- CRUD de clientes
+- CRUD de ordens de serviço (vinculadas a clientes)
+- Documentação Swagger gerada automaticamente
 
-SQLAlchemy
+---
 
-Pydantic
+## ▶️ Como rodar com Docker
 
-python-jose
-
-passlib
-
-SQLite
-
-💻 Como rodar localmente
-
-1. Clone o repositório
-git clone <https://github.com/SEU-USUARIO/api-controle-clientes.git>
+```bash
+git clone https://github.com/WallanDavid/api-controle-clientes.git
 cd api-controle-clientes
+docker-compose up --build
+```
 
-2. Crie e ative o ambiente virtual
-python -m venv venv
-venv\Scripts\activate (Windows)
+Acesse a documentação em:
+📚 **http://localhost:8000/docs**
 
-3. Instale as dependências
-pip install -r requirements.txt
+---
 
-4. Crie o banco de dados
-python -m app.create_db
+## 🧪 Endpoints principais
 
-5. Inicie o servidor
-uvicorn app.main:app --reload
+| Método | Rota                          | Descrição                      |
+|--------|-------------------------------|--------------------------------|
+| POST   | `/users/register`             | Registro de usuário            |
+| POST   | `/users/login`                | Login e obtenção do token JWT  |
+| GET    | `/clientes/`                  | Lista todos os clientes        |
+| POST   | `/clientes/`                  | Cria um cliente novo           |
+| GET    | `/ordens/`                    | Lista ordens de serviço        |
+| POST   | `/ordens/?cliente_id=1`       | Cria nova ordem p/ cliente     |
 
-🔐 Autenticação
-Registre um usuário com POST /users/register
+---
 
-Faça login com POST /users/login e copie o access_token
+## 🔐 Autenticação
 
-Clique em "Authorize" na Swagger UI e cole assim:
-Bearer SEU_TOKEN_AQUI
+1. Faça login via `/users/login`
+2. Copie o token retornado
+3. No Swagger, clique em **Authorize** e cole o token com o prefixo:
+   `Bearer <seu_token>`
 
-📑 Endpoints principais
-Usuários
-POST /users/register → Cadastrar usuário
+---
 
-POST /users/login → Login com JWT
+## 🌐 GitHub Pages
 
-Clientes
-POST /clientes/ → Criar cliente
+A demo explicativa (em breve) estará disponível em:
+**https://WallanDavid.github.io/api-controle-clientes**
 
-GET /clientes/ → Listar clientes
+---
 
-Ordens de Serviço
-POST /ordens/?cliente_id=ID → Criar OS
+## 🤝 Contribuições
 
-GET /ordens/ → Listar OS
+Aberto a melhorias, refatorações e ideias novas.
+Pull Requests são bem-vindos!
 
-🔍 Teste via Swagger
-Acesse: <http://127.0.0.1:8000/docs>
+---
 
-📝 Licença
-Projeto livre sob licença MIT.
+## 📄 Licença
 
-Desenvolvido por Wallan David 🚀
+Este projeto está sob a licença MIT.
