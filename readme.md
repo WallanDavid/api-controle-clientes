@@ -65,13 +65,6 @@ Acesse a documentação em:
 
 ---
 
-## 🌐 GitHub Pages
-
-A demo explicativa (em breve) estará disponível em:
-**https://WallanDavid.github.io/api-controle-clientes**
-
----
-
 ## 🤝 Contribuições
 
 Aberto a melhorias, refatorações e ideias novas.
